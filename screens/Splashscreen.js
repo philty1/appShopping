@@ -12,7 +12,7 @@ export default function SplashScreen(params) {
     <SafeAreaView style={styles.container}>
     <ImageBackground source={require('./../assets/prt.jpg')} resizeMode="cover" style={styles.image}>
 
-    <Text style={{ fontSize: 30, color: "grey" }}>Welcome to</Text>
+    <Text style={{ fontSize: 40, color: "grey" }}>Welcome to</Text>
       <Text style={{ fontSize: 40, fontWeight: "bold", color:"white" }}>PROFUMO CASA</Text>
 
 
@@ -27,13 +27,13 @@ export default function SplashScreen(params) {
           alignItems: "center",
           borderRadius: 10,
          // flexDirection: "row",
-          backgroundColor: "transparent",
+          backgroundColor: "black",
           
           
         }}
       >
       
-        <Text style={{ justifyContent: 'center', color: "white" }}>Get Started</Text>
+        <Text style={{ justifyContent: 'center', color: "white", backgroundcolor:'black', fontSize:20}}>SHOP NOW!!</Text>
       </TouchableOpacity>
      
     </ImageBackground>
@@ -51,4 +51,5 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   }
 });
+
 
