@@ -13,7 +13,6 @@ import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from '../assets/colors';
 import perf from '../assets/perf';
-import plants from '../assets/perf';
 const width = Dimensions.get('window').width / 2 - 30;
 
 const HomeScreen = ({navigation}) => {
