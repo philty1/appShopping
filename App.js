@@ -6,7 +6,8 @@ import { useNavigation} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import LoginScreen from "./screens/LoginScreen";
 import HomeScreen from "./screens/HomeScreen";
-import SplashScreen from "./screens/SplashScreen"; 
+import SplashScreen from "./screens/SplashScreen";
+import DetailsScreen from './screens/DetailsScreen';
 
 
 export default function App() {
@@ -15,10 +16,11 @@ export default function App() {
   return (
     <View  style={{flex:1}}>
       <NavigationContainer>
-        <Nav.Navigator  >
+        <Nav.Navigator screenOptions={{headerShown:false}} >
           <Nav.Screen style={styles.container}  name="SplashScreen" component={SplashScreen}/>
           <Nav.Screen  name="LoginScreen" component={LoginScreen}/>
           <Nav.Screen  name="HomeScreen" component={HomeScreen}/>
+          <Nav.Screen  name="Details" component={DetailsScreen}/>
         </Nav.Navigator>
       </NavigationContainer>
 
