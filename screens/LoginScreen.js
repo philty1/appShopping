@@ -1,6 +1,9 @@
 import React from "react";
-import { SafeAreaView, Text, Image, TextInput, TouchableOpacity,StyleSheet, ImageBackground } from "react-native";
+import { SafeAreaView, Text, Image, TextInput, TouchableOpacity,StyleSheet, ImageBackground, View } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import { Ionicons } from '@expo/vector-icons'; 
+
 
   export default function LoginScreen(params) {
   
@@ -15,6 +18,13 @@ import { AntDesign } from "@expo/vector-icons";
 
   return (
     <SafeAreaView style={styles.container}>
+       <View style={{ paddingHorizontal: 20,
+    marginTop: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between', backgroundColor:'colour'}}>
+        <Icon name="arrow-back" size={28} onPress={() => navigation.goBack()} color='white'/>
+        <Ionicons name="person-add-sharp" size={24} color="white" />
+      </View>
       <ImageBackground source={require('./../assets/prt.jpg')} resizeMode="cover" style={styles.image}>
 
       <TextInput
@@ -49,6 +59,7 @@ import { AntDesign } from "@expo/vector-icons";
         
         <Text style={{ justifyContent:"center", color: "white", fontSize:23, }}>Login</Text>
       </TouchableOpacity>
+      <Text style={{ justifyContent:"center",alignItems:"center", color: "white", fontSize:15, }}>Forgot Password?</Text>
       </ImageBackground>
     </SafeAreaView>
   );
@@ -58,11 +69,16 @@ import { AntDesign } from "@expo/vector-icons";
 const styles = StyleSheet.create({
   image: {
     flex: 1,
-    justifyContent: "flex-end"
+    justifyContent: "flex-end",
+    alignItems:"center"
+    
   },
+  
   container: {
     flex: 1,
-    justifyContent: "flex-end"
+    justifyContent: "flex-end",
+    backgroundColor:'black'
+    
   },
     input: {
       height: 40,
